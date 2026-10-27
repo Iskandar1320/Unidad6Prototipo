@@ -1,4 +1,4 @@
-#StoryBoard
+# StoryBoard
 1. La mente
 Tecla 1 · Escenario inicial
 
@@ -7,6 +7,8 @@ Un círculo irregular compuesto de cientos de partículas ocupa el centro de la 
 Al mover el mouse, las partículas cercanas se desvían, generan remolinos y dejan estelas que se disuelven gradualmente.
 
 Algoritmos: flow fields para la circulación; flocking para agrupación; steering para la interacción con el cursor.
+
+![LaMente](./ImganesStory/Mente_Esfera.png)
 
 2. Romper la cuerda
 Tecla 2 · Angustia y deseo de liberación
@@ -19,6 +21,8 @@ El círculo de fondo continúa funcionando, pero se altera momentáneamente por 
 
 Algoritmos: steering para formar las siluetas; flow fields para separar los fragmentos.
 
+![Cuerda](./ImganesStory/Cuerda.png)
+
 3. Purificación fallida
 Tecla 3 · Intentar limpiar lo que se siente
 
@@ -29,6 +33,8 @@ Esas agrupaciones se expanden como burbujas, pero en lugar de mantener una forma
 La intención es expresar un intento de limpieza mental que nunca consigue organizar completamente el sistema.
 
 Algoritmos: flocking para los grupos de burbujas; steering de separación y flow fields para expandirlos.
+
+![Jabon](./ImganesStory/Jabon.png)
 
 4. La inocencia perdida
 Tecla 4 · El recuerdo de la infancia
@@ -41,6 +47,8 @@ Posteriormente pierden cohesión y el niño se desintegra, como un recuerdo que 
 
 Algoritmos: steering de llegada y flocking para formar y sostener temporalmente la figura.
 
+![Audifonos](./ImganesStory/Audifonos_Niño.png)
+
 5. Asfixia emocional
 Tecla 5 · Las emociones reprimidas
 
@@ -52,6 +60,8 @@ Finalmente, la presión se libera y las partículas escapan en distintas direcci
 
 Algoritmos: steering de búsqueda y evasión; flow fields convergentes y divergentes.
 
+![Choke](./ImganesStory/Choke.png)
+
 6. El pacto
 Tecla 6 · Perder el control de la propia identidad
 
@@ -62,3 +72,5 @@ El bolígrafo deja una breve estela sobre el documento, como si estuviera firmá
 Al concluir, la máscara se fragmenta y las partículas del documento se dispersan, regresando al estado original.
 
 Algoritmos: steering hacia contornos y trayectorias locales; flocking y flow fields para la desintegración.
+
+![Pacto](./ImganesStory/Pacto.png)
