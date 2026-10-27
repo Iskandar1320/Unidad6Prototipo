@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#070809" />
+    <meta name="description" content="SPINELESS: instrumento audiovisual en vivo mediante agentes autónomos, steering, flocking y flow fields." />
+    <title>SPINELESS — Instrumento visual | Unidad 6</title>
+  </head>
+  <body>
+    <div id="app">
+      <main id="stage" aria-label="Escenario interactivo de partículas"></main>
+      <div class="grain" aria-hidden="true"></div>
+      <div class="corner corner--tl" aria-hidden="true"></div>
+      <div class="corner corner--tr" aria-hidden="true"></div>
+      <div class="corner corner--bl" aria-hidden="true"></div>
+      <div class="corner corner--br" aria-hidden="true"></div>
+
+      <div id="hud" class="hud">
+        <header class="brand">
+          <div class="eyebrow"><span class="live-dot"></span> INSTRUMENTO VISUAL / UNIDAD 06</div>
+          <h1>SPINELESS<span class="period">.</span></h1>
+          <p>Fragmentos de una mente <span class="divider-vertical">/</span> Agentes autónomos</p>
+        </header>
+
+        <div class="audio-panel" id="audioPanel">
+          <div class="panel-top"><span>AUDIO REACTIVO</span><span class="small-circle" id="audioIndicator"></span></div>
+          <div class="audio-actions">
+            <button id="loadAudio" class="control-button primary" title="Cargar una canción desde este dispositivo">CARGAR ARCHIVO</button>
+            <button id="captureTab" class="control-button" title="Compartir una pestaña incluyendo su audio">AUDIO DE PESTAÑA</button>
+            <button id="useMic" class="control-button icon-only" title="Usar micrófono" aria-label="Usar micrófono">MIC</button>
+          </div>
+          <input type="file" id="audioInput" accept="audio/*" hidden />
+          <div class="audio-status" id="audioStatus" role="status" aria-live="polite">Esperando fuente de audio · modo ambiente</div>
+          <div class="audio-player" id="audioPlayer" hidden>
+            <button id="playPause" class="play-button" aria-label="Reproducir o pausar">▶</button>
+            <div class="song-name" id="songName">—</div>
+            <span id="audioClock">0:00</span>
+          </div>
+          <audio id="music" preload="metadata"></audio>
+        </div>
+
+        <div class="scene-label" id="sceneLabel">
+          <span class="scene-index" id="sceneNumber">01 / 06</span>
+          <div class="scene-name" id="sceneName">LA MENTE</div>
+          <span class="scene-caption" id="sceneCaption">Campo de flujo autónomo</span>
+          <span class="scene-progress"><span id="sceneProgress"></span></span>
+        </div>
+
+        <div class="sidebar-side">PERCEPCIÓN <span class="side-divider">—</span> MOVIMIENTO <span class="side-divider">—</span> EMERGENCIA</div>
+
+        <div class="bottom-area">
+          <nav class="event-nav" aria-label="Activación manual de eventos">
+            <button class="event-key active" data-scene="1"><kbd>1</kbd><span>MENTE</span></button>
+            <button class="event-key" data-scene="2"><kbd>2</kbd><span>CUERDA</span></button>
+            <button class="event-key" data-scene="3"><kbd>3</kbd><span>JABÓN</span></button>
+            <button class="event-key" data-scene="4"><kbd>4</kbd><span>INFANCIA</span></button>
+            <button class="event-key" data-scene="5"><kbd>5</kbd><span>ASFIXIA</span></button>
+            <button class="event-key" data-scene="6"><kbd>6</kbd><span>PACTO</span></button>
+          </nav>
+          <div class="footer-line">
+            <span><span class="mouse-symbol">⌁</span> MOUSE = PERTURBAR EL FLUJO</span>
+            <div class="bottom-shortcuts"><button id="invertBtn" title="Invertir colores (B)"><kbd>B</kbd> INVERTIR</button><button id="fullscreenBtn" title="Pantalla completa (F)"><kbd>F</kbd> FULLSCREEN</button><button id="toggleHudBtn" title="Ocultar la interfaz (H)"><kbd>H</kbd> OCULTAR UI</button></div>
+          </div>
+        </div>
+      </div>
+      <div class="performance-indicator" id="performanceIndicator" aria-hidden="true">SPINELESS <span>●</span></div>
+      <div class="toast" id="toast" role="status" aria-live="polite"></div>
+      <div class="help-toast" id="helpToast">Presiona <kbd>H</kbd> para mostrar los controles.</div>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
