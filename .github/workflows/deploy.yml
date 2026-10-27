@@ -20,23 +20,32 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: Unidad6_
     steps:
       - name: Descargar repositorio
         uses: actions/checkout@v4
+
       - name: Instalar Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '22'
+
       - name: Instalar dependencias
         run: npm install --no-audit --no-fund
+
       - name: Compilar con Vite
         run: npm run build
+
       - name: Configurar Pages
         uses: actions/configure-pages@v5
+
       - name: Subir carpeta dist
         uses: actions/upload-pages-artifact@v3
         with:
-          path: dist
+          path: Unidad6_/dist
+
       - name: Publicar
         id: deployment
         uses: actions/deploy-pages@v4
